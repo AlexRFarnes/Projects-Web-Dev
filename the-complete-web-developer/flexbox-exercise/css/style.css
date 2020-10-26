@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: "Inconsolata", monospace;
+  border-bottom: 2px solid salmon;
+  border-right: 2px solid salmon;
+  width: 500px;
+  text-align: center;
+  box-shadow: 5px 5px 5px 0px rgb(114, 113, 113);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+img {
+  width: 600px;
+  height: auto;
+  margin: 20px;
+  box-shadow: 5px 5px 5px 0px rgb(114, 113, 113);
+  transition: transform 1s;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
