@@ -1,48 +1,57 @@
-let button = document.getElementById("enter");
-let input = document.getElementById("userinput");
-let ul = document.querySelector("ul");
+let ul = document.querySelector('ul');
+let enterButton = document.getElementById('enter');
+let input = document.getElementById('userinput');
+let listLi = document.querySelectorAll('li');
+
+
+function toggleDone(event) {
+    if (event.target.tagName === "LI") {
+        event.target.classList.toggle('done');
+    }
+};
+
+function deleteItem(event) {
+    let item = event.target.parentNode;
+    item.remove();
+};
+
+function createDeleteBtn() {
+    let btnDelete = document.createElement('button');
+    btnDelete.innerText = "Delete";
+    btnDelete.className = "btn-delete";
+    btnDelete.addEventListener('click', deleteItem);
+    return btnDelete;
+};
+
+function createItem() {
+    let item = document.createElement('li');
+    item.appendChild(document.createTextNode(input.value));
+    btn = createDeleteBtn();
+    item.appendChild(btn);
+    ul.appendChild(item);
+    input.value = "";
+};
 
 function inputLength() {
-	return input.value.length;
-}
+    return input.value.length;
+};
 
-function createListElement() {
-	let li = document.createElement("li");
-	let btnDelete = document.createElement('button');
-	btnDelete.innerText = "Delete";
-	btnDelete.className = "btn-delete";
-	btnDelete.addEventListener('click', deleteItem);
-	li.appendChild(document.createTextNode(input.value));
-	li.appendChild(btnDelete)
-	ul.appendChild(li);
-	input.value = "";
-}
+function addItemClick() {
+    if (inputLength() > 0) {
+        createItem();
+    }
+};
 
-function addListAfterClick() {
-	if (inputLength() > 0) {
-		createListElement();
-	}
-}
+function addItemEnter(event) {
+    if (event.which === 13 && inputLength() > 0) {
+        createItem();
+    }
+};
 
-function addListAfterKeypress(event) {
-	if (inputLength() > 0 && event.keyCode === 13) {
-		createListElement();
-	}
-}
+listLi.forEach(li => {
+    li.appendChild(createDeleteBtn());
+});
 
-function toggleFunction(event){
-	event.target.classList.toggle('done');
-}
-function deleteItem(event){
-	const clickTarget = event.target;
-	if (clickTarget.matches('.btn-delete')){
-		clickTarget.parentNode.remove();
-	}
-}
-
-button.addEventListener("click", addListAfterClick);
-
-input.addEventListener("keypress", addListAfterKeypress);
-
-ul.addEventListener('click', toggleFunction);
-
+ul.addEventListener('click', toggleDone);
+enterButton.addEventListener('click', addItemClick);
+input.addEventListener('keypress', addItemEnter);
