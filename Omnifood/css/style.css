@@ -101,11 +101,79 @@ h3 {
 }
 
 /* -----------ICONS----------- */
-ion-icon {
+.icon-big {
   font-size: 350%;
   display: block;
   color: #e67e22;
   margin-bottom: 10px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  font-size: 120%;
+  margin-right: 10px;
+
+  /* Secrets to align text and icons */
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+/* -----------LINKS----------- */
+a:link,
+a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid #e67e22;
+  padding-bottom: 2px;
+  transition: border-bottom 0.3s, color 0.3s;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+/* -----------BUTTONS----------- */
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-weight: 300;
+  color: #eee;
+  border-radius: 5px;
+  margin: 0 20px;
+  transition: all 200ms;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background: #e67e22;
+  color: #eee;
+  border: 1px solid #e67e22;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn:hover,
+.btn:active {
+  background: #bf6516;
+  border: 1px solid #bf6516;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  color: #eee;
 }
 
 /* ------------------------------------- */
@@ -152,7 +220,7 @@ header {
   color: #eee;
   text-transform: uppercase;
   font-size: 90%;
-  border-bottom: 2px solid transparent; /* this property must be set for the transition when hover to work */
+  border-bottom: 2px solid transparent; /* this property must be set for the transition on hover to work */
   transition: border-bottom 0.5s;
   padding: 10px 0;
 }
@@ -255,6 +323,11 @@ header {
   margin-right: 25px;
 }
 
+.btn-app:link,
+.btn-app:visited {
+  border-bottom: 0;
+}
+
 .btn-app img {
   height: 50px;
   width: auto;
@@ -262,41 +335,16 @@ header {
 }
 
 /* ------------------------------------- */
-/* BUTTONS */
+/* CITIES */
 /* ------------------------------------- */
 
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  padding: 10px 30px;
-  text-decoration: none;
-  font-weight: 300;
-  color: #eee;
-  border-radius: 5px;
-  margin: 0 20px;
-  transition: all 200ms;
+.section-cities .box {
+  width: 25%;
+  margin: 0;
 }
 
-.btn-full:link,
-.btn-full:visited {
-  background: #e67e22;
-  color: #eee;
-  border: 1px solid #e67e22;
-}
-
-.btn-ghost:link,
-.btn-ghost:visited {
-  border: 1px solid #e67e22;
-  color: #e67e22;
-}
-
-.btn:hover,
-.btn:active {
-  background: #bf6516;
-  border: 1px solid #bf6516;
-}
-
-.btn-ghost:hover,
-.btn-ghost:active {
-  color: #eee;
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
