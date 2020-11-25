@@ -141,7 +141,8 @@ a:active {
 /* -----------BUTTONS----------- */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type="submit"] {
   display: inline-block;
   padding: 10px 30px;
   text-decoration: none;
@@ -153,7 +154,8 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type="submit"] {
   background: #e67e22;
   color: #eee;
   border: 1px solid #e67e22;
@@ -166,7 +168,9 @@ a:active {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
   background: #bf6516;
   border: 1px solid #bf6516;
 }
@@ -394,4 +398,91 @@ cite img {
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+/* ------------------------------------- */
+/* PLANS */
+/* ------------------------------------- */
+
+.section-plans {
+  background: #f4f4f4;
+}
+
+.plan-box {
+  background: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 2px 2px #efefef;
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child {
+  background: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+  text-align: center;
+  border-bottom: none;
+}
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #e67e22;
+}
+
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 80%;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0px;
+}
+
+/* ------------------------------------- */
+/* FORM */
+/* ------------------------------------- */
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {
+  outline: none;
 }
