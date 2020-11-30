@@ -265,8 +265,8 @@ header {
 .meal-photo {
   width: 100%;
   margin: 0;
-  overflow: hidden; /* The image is scaled-up, this hids the image that flows out of the container */
-  background: black; /* The images have opacity to 0.5, this background color is used to dark the images because is the color displayed through */
+  overflow: hidden; /* The image is scaled-up, this hides the image's sections that flow out of the container */
+  background: black; /* The images have opacity of 0.5, this background color is used to dark the images because is the color displayed through */
   color: #eee;
 }
 
@@ -487,7 +487,6 @@ input[type="checkbox"] {
   outline: none;
 }
 
-
 /* ------------------------------------- */
 /* FOOTER */
 /* ------------------------------------- */
@@ -503,7 +502,7 @@ footer {
   float: left;
 }
 
-.social-links{
+.social-links {
   list-style: none;
   float: right;
 }
@@ -514,7 +513,7 @@ footer {
   margin-right: 20px;
 }
 
-.social-links li:last-child{
+.social-links li:last-child {
   margin-right: 0px;
 }
 
@@ -525,28 +524,27 @@ footer {
   text-decoration: none;
   border-bottom: none;
   color: #888;
-  transition: color 0.2s; 
+  transition: color 0.2s;
 }
 
 .footer-nav li a:hover,
 .footer-nav li a:active,
 .social-links li a:hover,
 .social-links li a:active {
-  color:#ddd;
+  color: #ddd;
 }
 
 .social-links li a:link,
 .social-links li a:visited {
   font-size: 160%;
   transition: color 0.3s;
-
 }
 
 .social-links .facebook,
 .social-links .twitter,
-.social-links .instagram{
+.social-links .instagram {
   transition: color 0.3s;
-}  
+}
 
 .social-links .facebook:hover {
   color: #3b5998;
@@ -565,4 +563,45 @@ footer p {
   text-align: center;
   font-size: 90%;
   margin-top: 10px;
+}
+
+/* ------------------------------------- */
+/* MEDIA QUERIES */
+/* ------------------------------------- */
+
+/* Big tablet to devices with widths close to the row width 1140px */
+
+@media screen and (max-width: 1200px) {
+  .hero-text-box {
+    width: 100%;
+    padding: 0 2%;
+  }
+  .row {
+    padding: 0 2%;
+  }
+}
+
+/* Small tables to bih tablets */
+
+@media screen and (max-width: 1023px) {
+  body {
+    font-size: 18px;
+  }
+  section {
+    padding: 60px 0;
+  }
+  .long-copy {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* Bigger phones to small tablets */
+
+@media screen and (max-width: 767px) {
+}
+
+/* Small devices */
+
+@media screen and (max-width: 480px) {
 }
