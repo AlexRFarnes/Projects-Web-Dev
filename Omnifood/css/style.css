@@ -253,6 +253,7 @@ header {
   width: 100%;
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 2px 2px #efefef;
+  z-index: 9999;
 }
 
 .sticky .main-nav {
@@ -745,4 +746,25 @@ footer p {
   .btn-app img {
     height: 40px;
   }
+}
+
+/* ------------------------------------- */
+/* ANIMATIONS */
+/* ------------------------------------- */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+  opacity: 0;
+  animation-duration: 1s;
+}
+
+.js--wp-4 {
+  animation-duration: 1s;
+}
+
+.js--wp-1.animate__fadeIn,
+.js--wp-2.animate__fadeInUp,
+.js--wp-3.animate__fadeIn {
+  opacity: 1;
 }
