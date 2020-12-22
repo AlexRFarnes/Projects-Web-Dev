@@ -1,6 +1,9 @@
 .btn {
+  &,
   &:link,
   &:visited {
+    // Only <a> elements posses link, visited, hover and active pseudo-class
+    // Add the <button> element because it does not has link and visited states
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -9,6 +12,10 @@
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
+
+    // <button> properties
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -21,7 +28,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }

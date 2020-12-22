@@ -13,7 +13,7 @@
     left: 0;
     width: 100%;
     backface-visibility: hidden; // to hid the back part
-    border-radius: 0.3rem;
+    border-radius: $small-border-radius;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     overflow: hidden;
 
